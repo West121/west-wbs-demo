@@ -14,6 +14,7 @@ import WbsHeader from './components/WbsHeader.vue';
 import WbsToolbar from './components/WbsToolbar.vue';
 import WbsTable from './components/WbsTable.vue';
 import WbsGanttMini from './components/WbsGanttMini.vue';
+import WbsBurndownChart from './components/WbsBurndownChart.vue';
 import TaskModal from './components/TaskModal.vue';
 
 // 项目数据
@@ -293,6 +294,13 @@ function handleExportJson() {
           :flat-data="flatData"
           @toggle-expand="toggleExpand"
           @edit-task="openEditModal"
+        />
+      </div>
+
+      <div v-show="currentView === 'burndown'" class="view-panel">
+        <WbsBurndownChart
+          :tree-data="treeData"
+          :stats="stats"
         />
       </div>
     </main>

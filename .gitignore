@@ -25,3 +25,7 @@ dist-ssr
 
 .pnpm-store
 .pnpm-store/*
+
+wbs-demo.zip
+.edgeone
+.edgeone/*
